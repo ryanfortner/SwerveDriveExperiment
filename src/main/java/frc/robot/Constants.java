@@ -16,4 +16,13 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+
+  public static class SwerveConstants {
+    public static final double kPTurning = 0.25;
+
+    public static final double driveGearRatio = (6.75 / 1.0); // 6.75:1
+    public static final double rotationGearRatio = (150.0 / 7.0);
+
+    public static final double maxMetersPerSecond = 5.0;
+  }
 }
