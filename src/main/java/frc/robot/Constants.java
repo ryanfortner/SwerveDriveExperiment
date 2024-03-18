@@ -26,8 +26,9 @@ public final class Constants {
 
   public static class SwerveConstants {
 
-    public static final double trackWidth = Units.inchesToMeters(18.5);
-    public static final double wheelBase = Units.inchesToMeters(24.25);
+    // flipped because originally there was too much slipping
+    public static final double trackWidth = Units.inchesToMeters(24.5);
+    public static final double wheelBase = Units.inchesToMeters(18.5);
 
     // Kinematics gets each module relative to center. X is forward/backward and Y is left/right, left is positive
     public static final SwerveDriveKinematics kinematics = new SwerveDriveKinematics(
@@ -42,7 +43,7 @@ public final class Constants {
     public static final double driveGearRatio = (6.75 / 1.0); // 6.75:1
     public static final double rotationGearRatio = (150.0 / 7.0);
 
-    public static final double maxMetersPerSecond = 5.0;
+    public static final double maxMetersPerSecond = 5;
 
     // front left
     public static final int frontLeftDriveMotorId = 8;

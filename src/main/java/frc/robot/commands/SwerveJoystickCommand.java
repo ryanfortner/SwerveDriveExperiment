@@ -43,7 +43,7 @@ public class SwerveJoystickCommand extends Command {
     // get joystick input as x, y, and rotation
     double xSpeed = forwardX.getAsDouble();
     double ySpeed = forwardY.getAsDouble();
-    double rot = rotation.getAsDouble();
+    double rot = -rotation.getAsDouble();
 
     // Apply deadband
     xSpeed = Math.abs(xSpeed) > 0.25 ? xSpeed : 0.0;
