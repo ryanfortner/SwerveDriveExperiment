@@ -77,24 +77,5 @@ public class SwerveSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    SmartDashboard.putNumber("NavX heading ", getHeading().getDegrees());
-
-    double loggingState[] = {
-      frontLeft.getState().angle.getRadians(),
-      frontLeft.getState().speedMetersPerSecond,
-      frontRight.getState().angle.getRadians(),
-      frontRight.getState().speedMetersPerSecond,
-      backLeft.getState().angle.getRadians(),
-      backLeft.getState().speedMetersPerSecond,
-      backRight.getState().angle.getRadians(),
-      backRight.getState().speedMetersPerSecond,
-    };
-
-    SmartDashboard.putNumberArray("Swerve Logging Values", loggingState);
-
-    SmartDashboard.putNumber("FL offset", frontLeft.getCANcoder().getAbsolutePosition().getValueAsDouble());
-    SmartDashboard.putNumber("FR offset", frontRight.getCANcoder().getAbsolutePosition().getValueAsDouble());
-    SmartDashboard.putNumber("BL offset", backLeft.getCANcoder().getAbsolutePosition().getValueAsDouble());
-    SmartDashboard.putNumber("BR offset", backRight.getCANcoder().getAbsolutePosition().getValueAsDouble());
   }
 }
